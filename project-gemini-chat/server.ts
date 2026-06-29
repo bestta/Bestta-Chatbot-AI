@@ -17,7 +17,7 @@ async function startServer() {
   let ai: GoogleGenAI | null = null;
   function getGeminiClient() {
     if (!ai) {
-      const apiKey = process.env.GEMINI_API_KEY || "AQ.Ab8RN6LFRqg-bWb3SR8jMLzVy8ajmw8svzqybh6m42n0YNCyFw";
+      
       if (!apiKey) {
         throw new Error("GEMINI_API_KEY environment variable is missing. Please configure it in your AI Studio Secrets.");
       }
